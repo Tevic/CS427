@@ -1,0 +1,264 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Multicore Architecture and Parallel Programming</title>
+
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+        body
+        {
+            padding: 90px;
+        }
+    </style>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <p class="navbar-text">
+                <h1 class="text-center text-info text-uppercase">Multicore Architecture and Parallel Programming</h1>
+            </p>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title text-uppercase"><span class="glyphicon glyphicon-circle-arrow-right"></span>Introduction</h3>
+            </div>
+            <div class="panel-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th colspan="2">
+                                <p class="text-muted">Multi-core era is here to stay and many programmers will be developing parallel software. But still not everyone is trained in parallel programming. In this course, we will study the state-of-art multicore processor architectures, learn how to program parallel processors systems, and learn how to put all these vast machine resources to the best use. With the understanding of the core concept of architecture, and significant hands-on experience with common parallel programming model, we are able to develop real applications on real hardware that can achieve performance and scalability, which is of importance to joining the work force or graduate school.</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="2"><strong>Course Code</strong><br />
+                                CS427<br />
+                            <strong>Location</strong><br />
+                                East Upper Hall-405<br />
+                            <strong>Time</strong><br />
+                                Single Week,Tuesday Class 7-8 & Thursday Class 1-2<br />
+                                Dual Week,Thursday Class 1-2<br />
+                            
+                        </tr>
+                        <tr>
+                            <td>
+                                <address>
+                                    <strong><a href="http://www.cs.sjtu.edu.cn/~jiangli/" target="_blank">Li Jiang(蒋力)</a></strong><br>
+                                    <strong>Instructor , Assistant Professor</strong><br>
+                                    Shanghai Jiao Tong University<br>
+                                    Department of Computer Science and Engineering<br>
+                                    SEIEE-3-521 No.800 Dongchuan Road,Shanghai,P.R.China<br>
+                                    <abbr title="Phone">Phone:</abbr>
+                                    +86-021-34208232<br>
+                                    <strong>Email:</strong>
+                                    <a href="mailto:jiangli@cs.sjtu.edu.cn" class="btn btn-success btn-xs">jiangli@cs.sjtu.edu.cn</a>
+                                </address>
+                            </td>
+                            <td>
+                                <address>
+                                    <strong>Weichao Tang(唐伟超)</strong><br>
+                                    <strong>TA , Graduate</strong><br>
+                                    Shanghai Jiao Tong University<br>
+                                    Department of Computer Science and Engineering<br>
+                                    SEIEE-3-125 No.800 Dongchuan Road,Shanghai,P.R.China<br>
+                                    <abbr title="Phone">Phone:</abbr>
+                                    +86-15618309042<br>
+                                    <strong>Email:</strong>
+                                    <a href="mailto:tevictt@sjtu.edu.cn" class="btn btn-success btn-xs">tevictt@sjtu.edu.cn</a>
+                                </address>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title text-uppercase"><span class="glyphicon glyphicon-circle-arrow-right"></span>SYLLABUS</h3>
+            </div>
+            <div class="panel-body">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td class="info"><span class="glyphicon glyphicon-hand-right"></span><strong>Course Arrangements</strong></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table class="table table-condensed">
+                                    <thead>
+                                        <tr class="text-uppercase">
+                                            <th>Week</th>
+                                            <th>Content</th>
+                                            <th>Download</th>
+                                            <th>Assignment</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1-1</td>
+                                            <td>Lecture 1: Introduction</td>
+                                            <td><a herf="" target="_blank"><span class="glyphicon glyphicon-download"></span></a></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>1-2</td>
+                                            <td>Lecture 2: Parallel computer architecture</td>
+                                            <td><a herf="" target="_blank"><span class="glyphicon glyphicon-download"></span></a></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>3-3</td>
+                                            <td>Lecture 3: Multicore system</td>
+                                            <td><a herf="" target="_blank"><span class="glyphicon glyphicon-download"></span></a></td>
+                                            <td>Reading Assignment I</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4-6</td>
+                                            <td>Lecture 4: OpenMP</td>
+                                            <td><a herf="" target="_blank"><span class="glyphicon glyphicon-download"></span></a></td>
+                                            <td>Assignment I</td>
+                                        </tr>
+                                        <tr>
+                                            <td>6-7</td>
+                                            <td>Lecture 5: Pthread</td>
+                                            <td><a herf="" target="_blank"><span class="glyphicon glyphicon-download"></span></a></td>
+                                            <td>Assignment II</td>
+                                        </tr>
+                                        <tr>
+                                            <td>7-7</td>
+                                            <td>Lecture 6: GPU architecture</td>
+                                            <td><a herf="" target="_blank"><span class="glyphicon glyphicon-download"></span></a></td>
+                                            <td>Reading Assignment II</td>
+                                        </tr>
+                                        <tr>
+                                            <td>8-9</td>
+                                            <td>Lecture 7: CUDA</td>
+                                            <td><a herf="" target="_blank"><span class="glyphicon glyphicon-download"></span></a></td>
+                                            <td>Assignment III</td>
+                                        </tr>
+                                        <tr>
+                                            <td>10-10</td>
+                                            <td>Project: Introduction</td>
+                                            <td><a herf="" target="_blank"><span class="glyphicon glyphicon-download"></span></a></td>
+                                            <td>Midterm Exam</td>
+                                        </tr>
+                                        <tr>
+                                            <td>11-12</td>
+                                            <td>Lecture 8: Map & Reduce</td>
+                                            <td><a herf="" target="_blank"><span class="glyphicon glyphicon-download"></span></a></td>
+                                            <td>Assignment IV</td>
+                                        </tr>
+                                        <tr>
+                                            <td>13-16</td>
+                                            <td>Project: Project Presentation and Q&A Tutorial: OpenCL</td>
+                                            <td><a herf="" target="_blank"><span class="glyphicon glyphicon-download"></span></a></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="info"><span class="glyphicon glyphicon-hand-right"></span><strong>Prerequisites</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Computer architecture, Program Design, and Data Structures</td>
+                        </tr>
+                        <tr>
+                            <td class="info"><span class="glyphicon glyphicon-hand-right"></span><strong>Grading</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Homework(30%)<br />
+                                Project(30%)<br />
+                                Midterm exam(30%)<br />
+                                Attendance(10%）<br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="info"><span class="glyphicon glyphicon-hand-right"></span><strong>Course Policy</strong></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>
+                                    It is your responsibility to visit the course website often to keep you up to date.<br />
+                                    Late submission of homework and assignments is not accepted.<br />
+                                    Academic Integrity violations, such as plagiarism, cheating on an exam etc., will result in a series of actions and penalties including the student failing the class.<br />
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title text-uppercase"><span class="glyphicon glyphicon-circle-arrow-right"></span>Textbook</h3>
+            </div>
+            <div class="panel-body">
+                <table class="table table-condensed">
+                    <thead>
+                        <tr>
+                            <th>Book</th>
+                            <th>Edition</th>
+                            <th>Author</th>
+                            <th>Link</th>
+                            <th>Remark</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Introduction to Parallel Programming</td>
+                            <td>1</td>
+                            <td>Peter Pacheco</td>
+                            <td><a target="_blank" href="http://www.amazon.cn/An-Introduction-to-Parallel-Programming-Pacheco-Peter/dp/0123742609/ref=sr_1_2?ie=UTF8&qid=1404976954&sr=8-2&keywords=An+Introduction+to+Parallel+Programming"><span class="glyphicon glyphicon-shopping-cart"></span></a></td>
+                            <td>TextBook</td>
+                        </tr>
+                        <tr>
+                            <td>Computer Architecture: A Quantitative Approach</td>
+                            <td>5</td>
+                            <td>John Hennessy and David Patters</td>
+                            <td><a target="_blank" href="http://www.amazon.cn/%E7%BB%8F%E5%85%B8%E5%8E%9F%E7%89%88%E4%B9%A6%E5%BA%93-%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84-%E9%87%8F%E5%8C%96%E7%A0%94%E7%A9%B6%E6%96%B9%E6%B3%95-%E4%BA%A8%E5%B0%BC%E8%A5%BF/dp/B006LBPKGG/ref=sr_1_1?ie=UTF8&qid=1404977316&sr=8-1&keywords=Computer+Architecture%3A+A+Quantitative+Approach"><span class="glyphicon glyphicon-shopping-cart"></span></a></td>
+                            <td>ReferenceBook</td>
+                        </tr>
+                        <tr>
+                            <td>Programming Massively Parallel Processors, A Hands-on Approach</td>
+                            <td>1</td>
+                            <td>David Kirk and Wen-mei Hwu</td>
+                            <td><a target="_blank" href="http://www.amazon.cn/Programming-Massively-Parallel-Processors-A-Hands-on-Approach-Kirk-David-B/dp/0124159923/ref=sr_1_1?ie=UTF8&qid=1404977114&sr=8-1&keywords=Programming+Massively+Parallel+Processors%2C+A+Hands-on+Approach"><span class="glyphicon glyphicon-shopping-cart"></span></a></td>
+                            <td>ReferenceBook</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+<!--        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title text-uppercase"><span class="glyphicon glyphicon-circle-arrow-right"></span>Introduction</h3>
+            </div>
+            <div class="panel-body">
+            </div>
+        </div>-->
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
