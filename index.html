@@ -9,8 +9,7 @@
     <!-- Bootstrap -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <style type="text/css">
-        body
-        {
+        body {
             /*padding: 90px;*/
             min-width: 800px;
         }
@@ -36,7 +35,7 @@
             <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
             <!--Message Icon-->
             <span class="glyphicon glyphicon-comment"></span>
-
+            <span class="badge">2014-10-07</span>
             <a data-toggle="modal" data-target="#ModalReadingAssignment1">Reading Assignment 1 has been updated! Click to check out!</a>
             <!--<a>Notes of lecture 2 & 3 have been updated!</a>-->
             <!--<a>Notes of lecture 1 & 2 have been updated!</a>-->
@@ -146,7 +145,7 @@
                     </div>
                     <!--Content-->
                     <div class="modal-body">
-                        <strong class="text-info">1.Cache Optimization</strong><br/>
+                        <strong class="text-info">1.Cache Optimization</strong><br />
                         2.2 Ten Advanced Optimizations of Cache Performance<br />
                         Appendix B.3 Six Basic Cache Optimizations<br />
                         <br />
@@ -183,19 +182,43 @@
                         3.3 Reducing Branch Costs with Advanced Branch Prediction<br />
                         3.9 Advanced Techniques for Instruction Delivery and Speculation<br />
                         <br />
-                        <strong class="text-success">Requirements</strong><br/>
-                        There are eight topics above for this assignment.<br />
-                        [Your topic number]=([Last Three Digits of Student Id] Mod 8)+1,for example,if your id is 1130249098,then [Your topic number]=(098 % 8)+1=3,so your topic is [3.Virtual Memory].<br />
+                        <strong class="text-success">Requirements</strong><br />
+                        There are eight topics above and a paper for this reading assignment.<br />
                         <br />
-                        You will find all these chapters listed below your topic in the book [Computer Architecture:A Quantitative Approach-Fifth Edition],
-                        then your need to read the chapters related to your topic and write a report in <strong class="text-warning">English</strong>.
-                        You can write your feelings or understandings after reading,also you can write something new what you read or hear related to your topic.<br />
+                        <strong class="text-primary">First Part</strong><br />
+                        <strong class="text-warning">[Your Topic ID]=([Last Three Digits of Student ID] Mod 8)+1</strong>,for example,if your id is 1130249098,then [Your Topic ID]=(098 % 8)+1=3,so your topic is [3.Virtual Memory].<br />
                         <br />
-                        You should write at least one pages(Font Size:12pt)for this report,at last you need to hand in a pdf format file named like this:<br />
+                        You will find all these chapters listed below your topic in the book [Computer Architecture:A Quantitative Approach-Fifth Edition],then your need to read the chapters related to your topic and write a report in <strong class="text-warning">English</strong>.Please contact TA for acquiring the text book, if necessary.You can write your feelings or understandings after reading,also you can write something new what you read or hear related to your topic.You should write at least <strong class="text-warning">two pages(Font Size:12pt)</strong>for this report.<br />
+                        <br />
+                        <strong class="text-primary">Second Part</strong><br />
+                        Everyone should read the paper <a href="files/An.Overview.of.Cache.Optimization.Techniques.and.Cache.Aware.Numerical.Algorithms.pdf" target="_blank">[An Overview of Cache Optimization Techniques and Cache-Aware Numerical Algorithms]</a>,and there are six basic techniques for improving cache efficiency in chapter three of this paper.Like the [Topic ID],<strong class="text-warning">[Your Algorithm ID]=([Last Three Digits of Student ID] Mod 6)+1</strong>,after reading this paper,you should write a small test case to compare the execution time between optimized and nonoptimized code use C or CPP according to [Your Algorithm ID](That is if  [Your Algorithm ID]=3,then you should write the test case for [Algorithm 3.3 Loop blocking for matrix transposition]).<br />
+                        <br />
+                        At last your report should be like this:<br />
+                        -----------------------------------------------------------------------------------------<br />
+                        1130249098 张三 ReadingAssinment1<br />
+                        Topic:[3.Virtual Memory]<br />
+                        …<br />
+                        At least two pages for First Part<br />
+                        …<br />
+                        Algorithm:[Algorithm 3.3 Loop blocking for matrix transposition]<br />
+                        …<br />
+                        Your C or CPP Code and test result.<br />
+                        …<br />
+                        -----------------------------------------------------------------------------------------<br />
+                        <br />
+                        Finally,convert your report to pdf format file named like this:<br />
                         StudentID_Name_ReadingAssinment1.pdf<br />
-                        (Example:1130249098_张三_ReadingAssinment1.pdf) before the due date.<br />
+                        (Example:1130249098_张三_ReadingAssinment1.pdf) and send to TA before the due date.<br />
                         <br />
-                        <strong class="text-danger">Due Date:2014-XX-XX 24:00</strong><br />
+                        <strong class="text-danger">Warning<br/></strong>
+                        <p class="text-danger">
+                            No cheating,please refer to 《上海交通大学学生学业诚信守则》,it is your responsibility to take the consequences if you violate the rule.<br />
+                            Due Date:2014-10-19 23:59<br />
+                        </p>
+                        <p>
+                            <a class="btn btn-default" target="_blank" href="files/ReadingAssignment1.pdf">PDF</a>
+                        </p>
+
 
                     </div>
                     <div class="modal-footer">
@@ -256,7 +279,8 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td colspan="2"><strong>Course Code</strong><br />
+                            <td colspan="2">
+                                <strong>Course Code</strong><br />
                                 CS427<br />
                                 <strong>Location</strong><br />
                                 East Upper Hall-405<br />
@@ -393,7 +417,8 @@
                             <td class="info"><span class="glyphicon glyphicon-hand-right"></span><strong>Grading</strong></td>
                         </tr>
                         <tr>
-                            <td>Homework(30%)<br />
+                            <td>
+                                Homework(30%)<br />
                                 Project(30%)<br />
                                 Midterm Exam(30%)<br />
                                 Attendance(10%）<br />
