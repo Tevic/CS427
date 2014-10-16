@@ -8,13 +8,21 @@
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <!-- Bootstrap -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/JavaScript.js"></script>
     <style type="text/css">
         body {
             /*padding: 90px;*/
             min-width: 800px;
         }
     </style>
-
+    <script>
+        function loadAssignment(assignmentName)
+        {
+            $('#ModalPublic .modal-title').html($(this).text());
+            $('#ModalPublic .modal-body').html('');
+            $('#ModalPublic .modal-body').load(assignmentName);      
+        }
+    </script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -42,143 +50,14 @@
             <!--<a data-toggle="modal" data-target="#ModalNews">You have a new message! Click to check out!</a>-->
         </div>
 
-        <!--Welcome-->
-        <div class="modal fade bs-example-modal-sm" id="ModalNews" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <!--ModalPublic-->
+        <div class="modal fade bs-example-modal-sm" id="ModalPublic" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
                         <!--Title-->
-                        <h4 class="modal-title" id="H1">Welcome</h4>
-                    </div>
-                    <!--Content-->
-                    <div class="modal-body">
-                        Welcome to Multicore Architecture and Parallel Programming!
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!--Assignment I-->
-        <div class="modal fade bs-example-modal-sm" id="ModalAssignment1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                        <!--Title-->
-                        <h4 class="modal-title" id="H2">Assignment I</h4>
-                    </div>
-                    <!--Content-->
-                    <div class="modal-body">
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--Assignment II-->
-        <div class="modal fade bs-example-modal-sm" id="ModalAssignment2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                        <!--Title-->
-                        <h4 class="modal-title" id="H3">Assignment II</h4>
-                    </div>
-                    <!--Content-->
-                    <div class="modal-body">
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--Assignment III-->
-        <div class="modal fade bs-example-modal-sm" id="ModalAssignment3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                        <!--Title-->
-                        <h4 class="modal-title" id="H4">Assignment III</h4>
-                    </div>
-                    <!--Content-->
-                    <div class="modal-body">
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--Assignment IV-->
-        <div class="modal fade bs-example-modal-sm" id="ModalAssignment4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                        <!--Title-->
-                        <h4 class="modal-title" id="H5">Assignment IV</h4>
-                    </div>
-                    <!--Content-->
-                    <div class="modal-body">
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--Reading Assignment I-->
-        <div class="modal fade bs-example-modal-sm" id="ModalReadingAssignment1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                        <!--Title-->
-                        <h4 class="modal-title" id="H6">Reading Assignment I</h4>
-                    </div>
-                    <!--Content-->
-                    <div class="modal-body">
-
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--Reading Assignment II-->
-        <div class="modal fade bs-example-modal-sm" id="ModalReadingAssignment2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                        <!--Title-->
-                        <h4 class="modal-title" id="H7">Reading Assignment II</h4>
-                    </div>
-                    <!--Content-->
-                    <div class="modal-body">
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--Midterm Exam-->
-        <div class="modal fade bs-example-modal-sm" id="ModalMidtermExam" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                        <!--Title-->
-                        <h4 class="modal-title" id="H8">Midterm Exam</h4>
+                        <h4 class="modal-title"></h4>
                     </div>
                     <!--Content-->
                     <div class="modal-body">
@@ -285,43 +164,43 @@
                                             <td>3-3</td>
                                             <td>Lecture 3: Multicore System</td>
                                             <td><a href="files/Lecture03V2.pptx" target="_blank"><span class="glyphicon glyphicon-download"></span></a></td>
-                                            <td><a data-toggle="modal" data-target="#ModalReadingAssignment1">Reading Assignment I</a></td>
+                                            <td><a data-toggle="modal" data-target="#ModalPublic" onclick="loadAssignment('html/ReadingAssignment1.html')" >Reading Assignment I</a></td>
                                         </tr>
                                         <tr>
                                             <td>4-6</td>
                                             <td>Lecture 4: OpenMP</td>
                                             <td><a href="" target="_blank"><span class="glyphicon glyphicon-download"></span></a></td>
-                                            <td><a data-toggle="modal" data-target="#ModalAssignment1">Assignment I</a></td>
+                                            <td><a data-toggle="modal" data-target="#ModalPublic" onclick="loadAssignment('TEST')">Assignment I</a></td>
                                         </tr>
                                         <tr>
                                             <td>6-7</td>
                                             <td>Lecture 5: Pthread</td>
                                             <td><a href="" target="_blank"><span class="glyphicon glyphicon-download"></span></a></td>
-                                            <td><a data-toggle="modal" data-target="#ModalAssignment2">Assignment II</a></td>
+                                            <td><a data-toggle="modal" data-target="#ModalPublic" onclick="$('#ModalPublic .modal-title').html($(this).text());">Assignment II</a></td>
                                         </tr>
                                         <tr>
                                             <td>7-7</td>
                                             <td>Lecture 6: GPU Architecture</td>
                                             <td><a href="" target="_blank"><span class="glyphicon glyphicon-download"></span></a></td>
-                                            <td><a data-toggle="modal" data-target="#ModalReadingAssignment2">Reading Assignment II</a></td>
+                                            <td><a data-toggle="modal" data-target="#ModalPublic" onclick="$('#ModalPublic .modal-title').html($(this).text());">Reading Assignment II</a></td>
                                         </tr>
                                         <tr>
                                             <td>8-9</td>
                                             <td>Lecture 7: CUDA</td>
                                             <td><a href="" target="_blank"><span class="glyphicon glyphicon-download"></span></a></td>
-                                            <td><a data-toggle="modal" data-target="#ModalAssignment3">Assignment III</a></td>
+                                            <td><a data-toggle="modal" data-target="#ModalPublic" onclick="$('#ModalPublic .modal-title').html($(this).text());">Assignment III</a></td>
                                         </tr>
                                         <tr>
                                             <td>10-10</td>
                                             <td>Project: Introduction</td>
                                             <td><a href="" target="_blank"><span class="glyphicon glyphicon-download"></span></a></td>
-                                            <td><a data-toggle="modal" data-target="#ModalMidtermExam">Midterm Exam</a></td>
+                                            <td><a data-toggle="modal" data-target="#ModalPublic" onclick="$('#ModalPublic .modal-title').html($(this).text());">Midterm Exam</a></td>
                                         </tr>
                                         <tr>
                                             <td>11-12</td>
                                             <td>Lecture 8: Map & Reduce</td>
                                             <td><a href="" target="_blank"><span class="glyphicon glyphicon-download"></span></a></td>
-                                            <td><a data-toggle="modal" data-target="#ModalAssignment4">Assignment IV</a></td>
+                                            <td><a data-toggle="modal" data-target="#ModalPublic" onclick="$('#ModalPublic .modal-title').html($(this).text());">Assignment IV</a></td>
                                         </tr>
                                         <tr>
                                             <td>13-16</td>
@@ -426,7 +305,7 @@
 <script>
     $(document).ready(
         function () {
-            $("#ModalReadingAssignment1 .modal-body").load("html/ReadingAssignment1.html");
+            //$("#ModalReadingAssignment1 .modal-body").load("html/ReadingAssignment1.html");
     }
         )
 </script>
