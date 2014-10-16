@@ -16,9 +16,9 @@
         }
     </style>
     <script>
-        function loadAssignment(assignmentName)
+        function loadAssignment(modalName,assignmentName)
         {
-            $('#ModalPublic .modal-title').html($(this).text());
+            $('#ModalPublic .modal-title').html(modalName);
             $('#ModalPublic .modal-body').html('');
             $('#ModalPublic .modal-body').load(assignmentName);      
         }
@@ -164,7 +164,7 @@
                                             <td>3-3</td>
                                             <td>Lecture 3: Multicore System</td>
                                             <td><a href="files/Lecture03V2.pptx" target="_blank"><span class="glyphicon glyphicon-download"></span></a></td>
-                                            <td><a data-toggle="modal" data-target="#ModalPublic" onclick="loadAssignment('html/ReadingAssignment1.html')" >Reading Assignment I</a></td>
+                                            <td><a data-toggle="modal" data-target="#ModalPublic" onclick="loadAssignment('Reading Assignment I', 'html/ReadingAssignment1.html')" >Reading Assignment I</a></td>
                                         </tr>
                                         <tr>
                                             <td>4-6</td>
