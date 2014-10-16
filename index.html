@@ -16,11 +16,16 @@
         }
     </style>
     <script>
-        function loadAssignment(modalName,assignmentName)
+        function loadAssignment(fileName,assignmentName)
         {
-            $('#ModalPublic .modal-title').html(modalName);
+            if (assignmentName != null && assignmentName != '')
+                $('#ModalPublic .modal-title').html(assignmentName);
+            else
+                $('#ModalPublic .modal-title').html($(event.target).text());
             $('#ModalPublic .modal-body').html('');
-            $('#ModalPublic .modal-body').load(assignmentName);      
+            if (fileName != null && fileName != '') {
+                $('#ModalPublic .modal-body').load(fileName);
+            }
         }
     </script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -44,10 +49,7 @@
             <!--Message Icon-->
             <span class="glyphicon glyphicon-comment"></span>
             <span class="badge">2014-10-07</span>
-            <a data-toggle="modal" data-target="#ModalReadingAssignment1">Reading Assignment 1 has been updated! Click to check out!</a>
-            <!--<a>Notes of lecture 2 & 3 have been updated!</a>-->
-            <!--<a>Notes of lecture 1 & 2 have been updated!</a>-->
-            <!--<a data-toggle="modal" data-target="#ModalNews">You have a new message! Click to check out!</a>-->
+            <a data-toggle="modal" data-target="#ModalPublic" onclick="loadAssignment('html/ReadingAssignment1.html', 'Reading Assignment I')">Reading Assignment 1 has been updated! Please check out!</a>
         </div>
 
         <!--ModalPublic-->
@@ -164,43 +166,43 @@
                                             <td>3-3</td>
                                             <td>Lecture 3: Multicore System</td>
                                             <td><a href="files/Lecture03V2.pptx" target="_blank"><span class="glyphicon glyphicon-download"></span></a></td>
-                                            <td><a data-toggle="modal" data-target="#ModalPublic" onclick="loadAssignment('Reading Assignment I', 'html/ReadingAssignment1.html')" >Reading Assignment I</a></td>
+                                            <td><a data-toggle="modal" data-target="#ModalPublic" onclick="loadAssignment('html/ReadingAssignment1.html')" >Reading Assignment I</a></td>
                                         </tr>
                                         <tr>
                                             <td>4-6</td>
                                             <td>Lecture 4: OpenMP</td>
                                             <td><a href="" target="_blank"><span class="glyphicon glyphicon-download"></span></a></td>
-                                            <td><a data-toggle="modal" data-target="#ModalPublic" onclick="loadAssignment('TEST')">Assignment I</a></td>
+                                            <td><a data-toggle="modal" data-target="#ModalPublic" onclick="loadAssignment('')">Assignment I</a></td>
                                         </tr>
                                         <tr>
                                             <td>6-7</td>
                                             <td>Lecture 5: Pthread</td>
                                             <td><a href="" target="_blank"><span class="glyphicon glyphicon-download"></span></a></td>
-                                            <td><a data-toggle="modal" data-target="#ModalPublic" onclick="$('#ModalPublic .modal-title').html($(this).text());">Assignment II</a></td>
+                                            <td><a data-toggle="modal" data-target="#ModalPublic" onclick="loadAssignment('')">Assignment II</a></td>
                                         </tr>
                                         <tr>
                                             <td>7-7</td>
                                             <td>Lecture 6: GPU Architecture</td>
                                             <td><a href="" target="_blank"><span class="glyphicon glyphicon-download"></span></a></td>
-                                            <td><a data-toggle="modal" data-target="#ModalPublic" onclick="$('#ModalPublic .modal-title').html($(this).text());">Reading Assignment II</a></td>
+                                            <td><a data-toggle="modal" data-target="#ModalPublic" onclick="loadAssignment('')">Reading Assignment II</a></td>
                                         </tr>
                                         <tr>
                                             <td>8-9</td>
                                             <td>Lecture 7: CUDA</td>
                                             <td><a href="" target="_blank"><span class="glyphicon glyphicon-download"></span></a></td>
-                                            <td><a data-toggle="modal" data-target="#ModalPublic" onclick="$('#ModalPublic .modal-title').html($(this).text());">Assignment III</a></td>
+                                            <td><a data-toggle="modal" data-target="#ModalPublic" onclick="loadAssignment('')">Assignment III</a></td>
                                         </tr>
                                         <tr>
                                             <td>10-10</td>
                                             <td>Project: Introduction</td>
                                             <td><a href="" target="_blank"><span class="glyphicon glyphicon-download"></span></a></td>
-                                            <td><a data-toggle="modal" data-target="#ModalPublic" onclick="$('#ModalPublic .modal-title').html($(this).text());">Midterm Exam</a></td>
+                                            <td><a data-toggle="modal" data-target="#ModalPublic" onclick="loadAssignment('')">Midterm Exam</a></td>
                                         </tr>
                                         <tr>
                                             <td>11-12</td>
                                             <td>Lecture 8: Map & Reduce</td>
                                             <td><a href="" target="_blank"><span class="glyphicon glyphicon-download"></span></a></td>
-                                            <td><a data-toggle="modal" data-target="#ModalPublic" onclick="$('#ModalPublic .modal-title').html($(this).text());">Assignment IV</a></td>
+                                            <td><a data-toggle="modal" data-target="#ModalPublic" onclick="loadAssignment('')">Assignment IV</a></td>
                                         </tr>
                                         <tr>
                                             <td>13-16</td>
@@ -301,11 +303,3 @@
     <script src="bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
-
-<script>
-    $(document).ready(
-        function () {
-            //$("#ModalReadingAssignment1 .modal-body").load("html/ReadingAssignment1.html");
-    }
-        )
-</script>
