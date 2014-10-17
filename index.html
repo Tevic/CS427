@@ -8,7 +8,6 @@
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <!-- Bootstrap -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <script src="js/JavaScript.js"></script>
     <style type="text/css">
         body {
             /*padding: 90px;*/
@@ -16,8 +15,7 @@
         }
     </style>
     <script>
-        function loadAssignment(fileName,assignmentName)
-        {
+        function loadAssignment(fileName, assignmentName) {
             if (assignmentName != null && assignmentName != '')
                 $('#ModalPublic .modal-title').html(assignmentName);
             else
@@ -25,6 +23,7 @@
             $('#ModalPublic .modal-body').html('');
             if (fileName != null && fileName != '') {
                 $('#ModalPublic .modal-body').load(fileName);
+
             }
         }
         $(document).ready(loadAssignment);
@@ -299,7 +298,7 @@
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/jquery-2.1.1.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bootstrap/js/bootstrap.min.js"></script>
 </body>
