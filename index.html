@@ -15,18 +15,18 @@
         }
     </style>
     <script>
-        function loadAssignment(fileName, assignmentName) {
-            if (assignmentName != null && assignmentName != '')
-                $('#ModalPublic .modal-title').html(assignmentName);
+        function loadModal(title, content) {
+            if (title != null && title != '')
+                $('#ModalPublic .modal-title').html(title);
             else
                 $('#ModalPublic .modal-title').html($(event.target).text());
             $('#ModalPublic .modal-body').html('');
-            if (fileName != null && fileName != '') {
-                $('#ModalPublic .modal-body').load(fileName);
+            if (content != null && content != '') {
+                $('#ModalPublic .modal-body').load(content);
 
             }
         }
-        $(document).ready(loadAssignment);
+        $(document).ready(loadModal);
     </script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -48,12 +48,13 @@
             <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
             <!--Message Icon-->
             <span class="glyphicon glyphicon-comment"></span>
-            <span class="badge">2014-10-07</span>
-            <a data-toggle="modal" data-target="#ModalPublic" onclick="loadAssignment('html/ReadingAssignment1.html', 'Reading Assignment I')">Reading Assignment 1 has been updated! Please check out!</a>
+            <span class="badge">2014-10-20</span>
+            <a data-toggle="modal" data-target="#ModalPublic" onclick="loadModal('Submission of Reading Assignment I','html/RA1.html')">Please check the submission status of Reading Assignment I.</a>
+            <!--<a data-toggle="modal" data-target="#ModalPublic" onclick="loadModal('Reading Assignment I','html/ReadingAssignment1.html')">Reading Assignment 1 has been updated! Please check out!</a>-->
         </div>
 
         <!--ModalPublic-->
-        <div class="modal fade bs-example-modal-sm" id="ModalPublic" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal fade bs-example-modal-lg" id="ModalPublic" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -166,43 +167,43 @@
                                             <td>3-3</td>
                                             <td>Lecture 3: Multicore System</td>
                                             <td><a href="files/Lecture03V2.pptx" target="_blank"><span class="glyphicon glyphicon-download"></span></a></td>
-                                            <td><a data-toggle="modal" data-target="#ModalPublic" onclick="loadAssignment('html/ReadingAssignment1.html')" >Reading Assignment I</a></td>
+                                            <td><a data-toggle="modal" data-target="#ModalPublic" onclick="loadModal(null,'html/ReadingAssignment1.html')" >Reading Assignment I</a></td>
                                         </tr>
                                         <tr>
                                             <td>4-6</td>
                                             <td>Lecture 4: OpenMP</td>
                                             <td><a href="" target="_blank"><span class="glyphicon glyphicon-download"></span></a></td>
-                                            <td><a data-toggle="modal" data-target="#ModalPublic" onclick="loadAssignment('')">Assignment I</a></td>
+                                            <td><a data-toggle="modal" data-target="#ModalPublic" onclick="loadModal(null,'')">Assignment I</a></td>
                                         </tr>
                                         <tr>
                                             <td>6-7</td>
                                             <td>Lecture 5: Pthread</td>
                                             <td><a href="" target="_blank"><span class="glyphicon glyphicon-download"></span></a></td>
-                                            <td><a data-toggle="modal" data-target="#ModalPublic" onclick="loadAssignment('')">Assignment II</a></td>
+                                            <td><a data-toggle="modal" data-target="#ModalPublic" onclick="loadModal(null,'')">Assignment II</a></td>
                                         </tr>
                                         <tr>
                                             <td>7-7</td>
                                             <td>Lecture 6: GPU Architecture</td>
                                             <td><a href="" target="_blank"><span class="glyphicon glyphicon-download"></span></a></td>
-                                            <td><a data-toggle="modal" data-target="#ModalPublic" onclick="loadAssignment('')">Reading Assignment II</a></td>
+                                            <td><a data-toggle="modal" data-target="#ModalPublic" onclick="loadModal(null,'')">Reading Assignment II</a></td>
                                         </tr>
                                         <tr>
                                             <td>8-9</td>
                                             <td>Lecture 7: CUDA</td>
                                             <td><a href="" target="_blank"><span class="glyphicon glyphicon-download"></span></a></td>
-                                            <td><a data-toggle="modal" data-target="#ModalPublic" onclick="loadAssignment('')">Assignment III</a></td>
+                                            <td><a data-toggle="modal" data-target="#ModalPublic" onclick="loadModal(null,'')">Assignment III</a></td>
                                         </tr>
                                         <tr>
                                             <td>10-10</td>
                                             <td>Project: Introduction</td>
                                             <td><a href="" target="_blank"><span class="glyphicon glyphicon-download"></span></a></td>
-                                            <td><a data-toggle="modal" data-target="#ModalPublic" onclick="loadAssignment('')">Midterm Exam</a></td>
+                                            <td><a data-toggle="modal" data-target="#ModalPublic" onclick="loadModal(null,'')">Midterm Exam</a></td>
                                         </tr>
                                         <tr>
                                             <td>11-12</td>
                                             <td>Lecture 8: Map & Reduce</td>
                                             <td><a href="" target="_blank"><span class="glyphicon glyphicon-download"></span></a></td>
-                                            <td><a data-toggle="modal" data-target="#ModalPublic" onclick="loadAssignment('')">Assignment IV</a></td>
+                                            <td><a data-toggle="modal" data-target="#ModalPublic" onclick="loadModal(null,'')">Assignment IV</a></td>
                                         </tr>
                                         <tr>
                                             <td>13-16</td>
@@ -227,8 +228,8 @@
                             <td>
                                 Homework(30%)<br />
                                 Project(30%)<br />
-                                Midterm Exam(30%)<br />
-                                Attendance(10%）<br />
+                                Midterm Exam(30%)<br />                               
+                                Attendance(10%)<br />
                             </td>
                         </tr>
                         <tr>
