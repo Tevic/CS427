@@ -23,8 +23,8 @@
             $('#ModalPublic .modal-body').html('');
             if (content != null && content != '') {
                 $('#ModalPublic .modal-body').load(content);
-
             }
+            $('#ModalPublic').modal();
         }
         $(document).ready(loadModal);
     </script>
@@ -48,9 +48,10 @@
             <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
             <!--Message Icon-->
             <span class="glyphicon glyphicon-comment"></span>
-            <span class="badge">2014-10-20</span>
-            <a data-toggle="modal" data-target="#ModalPublic" onclick="loadModal('Submission of Reading Assignment I','html/RA1.html')">Please check the submission status of Reading Assignment I.</a>
-            <!--<a data-toggle="modal" data-target="#ModalPublic" onclick="loadModal('Reading Assignment I','html/ReadingAssignment1.html')">Reading Assignment 1 has been updated! Please check out!</a>-->
+            <span class="badge">2014-10-23</span>
+            <a>Notes of Lecture 4 has been updated.</a>
+            <!--<a onclick="loadModal('Submission of Reading Assignment I','html/RA1.html')">Please check the submission status of Reading Assignment I.</a>-->
+            <!--<a onclick="loadModal('Reading Assignment I','html/ReadingAssignment1.html')">Reading Assignment 1 has been updated! Please check out!</a>-->
         </div>
 
         <!--ModalPublic-->
@@ -167,43 +168,43 @@
                                             <td>3-3</td>
                                             <td>Lecture 3: Multicore System</td>
                                             <td><a href="files/Lecture03V2.pptx" target="_blank"><span class="glyphicon glyphicon-download"></span></a></td>
-                                            <td><a data-toggle="modal" data-target="#ModalPublic" onclick="loadModal(null,'html/ReadingAssignment1.html')" >Reading Assignment I</a></td>
+                                            <td><a onclick="loadModal(null,'html/ReadingAssignment1.html')" >Reading Assignment I</a></td>
                                         </tr>
                                         <tr>
                                             <td>4-6</td>
                                             <td>Lecture 4: OpenMP</td>
-                                            <td><a href="" target="_blank"><span class="glyphicon glyphicon-download"></span></a></td>
-                                            <td><a data-toggle="modal" data-target="#ModalPublic" onclick="loadModal(null,'')">Assignment I</a></td>
+                                            <td><a href="files/Lecture04-05.zip" target="_blank"><span class="glyphicon glyphicon-download"></span></a></td>
+                                            <td><a onclick="loadModal(null,'')">Assignment I</a></td>
                                         </tr>
                                         <tr>
                                             <td>6-7</td>
                                             <td>Lecture 5: Pthread</td>
                                             <td><a href="" target="_blank"><span class="glyphicon glyphicon-download"></span></a></td>
-                                            <td><a data-toggle="modal" data-target="#ModalPublic" onclick="loadModal(null,'')">Assignment II</a></td>
+                                            <td><a onclick="loadModal(null,'')">Assignment II</a></td>
                                         </tr>
                                         <tr>
                                             <td>7-7</td>
                                             <td>Lecture 6: GPU Architecture</td>
                                             <td><a href="" target="_blank"><span class="glyphicon glyphicon-download"></span></a></td>
-                                            <td><a data-toggle="modal" data-target="#ModalPublic" onclick="loadModal(null,'')">Reading Assignment II</a></td>
+                                            <td><a onclick="loadModal(null,'')">Reading Assignment II</a></td>
                                         </tr>
                                         <tr>
                                             <td>8-9</td>
                                             <td>Lecture 7: CUDA</td>
                                             <td><a href="" target="_blank"><span class="glyphicon glyphicon-download"></span></a></td>
-                                            <td><a data-toggle="modal" data-target="#ModalPublic" onclick="loadModal(null,'')">Assignment III</a></td>
+                                            <td><a onclick="loadModal(null,'')">Assignment III</a></td>
                                         </tr>
                                         <tr>
                                             <td>10-10</td>
                                             <td>Project: Introduction</td>
                                             <td><a href="" target="_blank"><span class="glyphicon glyphicon-download"></span></a></td>
-                                            <td><a data-toggle="modal" data-target="#ModalPublic" onclick="loadModal(null,'')">Midterm Exam</a></td>
+                                            <td><a onclick="loadModal(null,'')">Midterm Exam</a></td>
                                         </tr>
                                         <tr>
                                             <td>11-12</td>
                                             <td>Lecture 8: Map & Reduce</td>
                                             <td><a href="" target="_blank"><span class="glyphicon glyphicon-download"></span></a></td>
-                                            <td><a data-toggle="modal" data-target="#ModalPublic" onclick="loadModal(null,'')">Assignment IV</a></td>
+                                            <td><a onclick="loadModal(null,'')">Assignment IV</a></td>
                                         </tr>
                                         <tr>
                                             <td>13-16</td>
